@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import World from './components/World/World';
 import Country from './components/Country/Country';
 import getData from './api/covid';
+import './App.css';
 
 function App() {
   const state = useSelector((state) => state.covid);
@@ -13,14 +14,16 @@ function App() {
   }, []);
   return (
     <Router>
-      <Switch>
-        <Route path={`/${state.country}`}>
-          <Country />
-        </Route>
-        <Route path="/">
-          <World />
-        </Route>
-      </Switch>
+      <div className="mobile">
+        <Switch>
+          <Route path={`/${state.country}`}>
+            <Country />
+          </Route>
+          <Route path="/">
+            <World />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }

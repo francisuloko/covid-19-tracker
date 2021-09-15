@@ -9,29 +9,33 @@ const World = () => {
     <>
       {covidTotal && (
         <div className="container">
-          <h1>World Page - Covid Situation Report</h1>
-          <h2>Worldwide Info - Up to date</h2>
-          <div>
-            <p>
-              {covidTotal.today_confirmed}
-            </p>
-            <h2>Confirmed Cases</h2>
-          </div>
-          <div>
-            <div>
-              <p>
-                {covidTotal.today_deaths}
-              </p>
-              <h2>Confirmed Deaths</h2>
+          <div className="row mb-3">
+            <div className="col-6 themed-grid-col">
+              {covidTotal.name}
             </div>
-            <div>
-              <p>
-                {covidTotal.today_recovered}
-              </p>
-              <h2>Recovered</h2>
+            <div className="col-6 themed-grid-col">
+              <h2>Cases</h2>
+              <span>{covidTotal.today_confirmed}</span>
             </div>
           </div>
-          <Country />
+          <div className="row mb-3">
+            <div className="col-12 themed-grid-col">
+              Record Breakdown
+            </div>
+          </div>
+          <div className="row mb-3">
+            <div className="col-6 themed-grid-col">
+              <h4>Deaths</h4>
+              <span>{covidTotal.today_deaths}</span>
+            </div>
+            <div className="col-6 themed-grid-col">
+              <h4>Recovered</h4>
+              <span>{covidTotal.today_recovered}</span>
+            </div>
+            <div className="col-12 themed-grid-col text-center">
+              <Country />
+            </div>
+          </div>
         </div>
       )}
     </>
