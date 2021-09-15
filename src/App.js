@@ -1,24 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home/Home';
+import World from './components/Home/World';
 import Details from './components/Details/Details';
-import Header from './components/Header/Header';
+import getData from './api/covid';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getData());
+  }, []);
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Switch>
-          <Route to="/">
-            <Home />
-          </Route>
-          <Route to="/details">
-            <Details />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Switch>
+        <Route to="/">
+          <World />
+        </Route>
+        <Route to="/details">
+          <Details />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
