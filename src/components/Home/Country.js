@@ -5,7 +5,7 @@ import Button from './Button';
 
 const Country = () => {
   const state = useSelector((state) => state.covid);
-  const [select, setSelect] = useState('Afghanistan');
+  const [country, setCountry] = useState('Afghanistan');
   let countries;
   let countriesKeys;
   if (state.data.dates) {
@@ -13,7 +13,7 @@ const Country = () => {
     countriesKeys = Object.entries(countries);
   }
   const handleCategory = (event) => {
-    setSelect(event.target.value);
+    setCountry(event.target.value);
   };
   return (
     <form>
@@ -34,7 +34,7 @@ const Country = () => {
           </select>
         </label>
       </div>
-      <Button select={select} path={`/${select}`} />
+      <Button select={country} path={`/${country}`} />
     </form>
   );
 };

@@ -21,11 +21,11 @@ const CovidReducer = (state = initialState, action) => {
   }
   switch (action.type) {
     case GET_DATA:
-      return { ...state, loading: true };
+      return { ...state };
     case GET_DATA_SUCCESS:
-      return { ...state, data: action.data, loading: false };
+      return { ...state, data: action.data };
     case GET_DATA_ERR:
-      return { ...state, error: action.error, loading: false };
+      return { ...state, error: action.error };
     case FILTER_COUNTRY:
       return { ...state, country: action.payload };
     default:
