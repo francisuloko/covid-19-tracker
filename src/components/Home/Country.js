@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { date } from '../../api/covid';
+import Button from './Button';
 
 const Country = () => {
   const state = useSelector((state) => state.covid);
-  const [country, setCountry] = useState('Afghanistan');
+  const [select, setSelect] = useState('Afghanistan');
   let countries;
   let countriesKeys;
   if (state.data.dates) {
@@ -12,9 +13,8 @@ const Country = () => {
     countriesKeys = Object.entries(countries);
   }
   const handleCategory = (event) => {
-    setCountry(event.target.value);
+    setSelect(event.target.value);
   };
-
   return (
     <form>
       <h2>Filter By Country:</h2>
@@ -34,7 +34,7 @@ const Country = () => {
           </select>
         </label>
       </div>
-      <Button icon="right" select={country} path={`/${country}`} />
+      <Button select={select} path={`/${select}`} />
     </form>
   );
 };

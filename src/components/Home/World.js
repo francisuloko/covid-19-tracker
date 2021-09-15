@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Country from './Country';
 
 const World = () => {
   const state = useSelector((state) => state.covid);
@@ -30,6 +31,7 @@ const World = () => {
               <h2>Recovered</h2>
             </div>
           </div>
+          <Country />
         </div>
       )}
     </>
