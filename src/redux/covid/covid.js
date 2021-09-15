@@ -5,8 +5,6 @@ const FILTER_COUNTRY = 'covid-19-tracking/country/FILTER_COUNTRY';
 
 const initialState = {
   data: {},
-  loading: false,
-  error: {},
   country: 'Afghanistan',
 };
 

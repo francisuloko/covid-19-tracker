@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import World from './components/Home/World';
-import Details from './components/Details/Details';
+import World from './components/World/World';
+import Country from './components/Country/Country';
 import getData from './api/covid';
 
 function App() {
@@ -14,11 +14,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route to="/">
-          <World />
+        <Route path={`/${state.country}`}>
+          <Country />
         </Route>
-        <Route to={`/${state.country}`}>
-          <Details />
+        <Route path="/">
+          <World />
         </Route>
       </Switch>
     </Router>
