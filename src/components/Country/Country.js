@@ -24,6 +24,9 @@ const Country = () => {
               <span>
                 {countries[state.country].today_confirmed}
               </span>
+              <span>
+                {countries[state.country].source}
+              </span>
             </div>
           </div>
         </div>
@@ -77,6 +80,11 @@ const Country = () => {
             </span>
           </li>
         </ul>
+        <p className="text-center m-0 p-2">
+          {
+            `Source: ${countries[state.country].source}`
+          }
+        </p>
       </div>
     );
   }
