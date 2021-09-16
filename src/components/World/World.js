@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { date } from '../../api/covid';
 import Country from './selectCountry';
 
 const World = () => {
