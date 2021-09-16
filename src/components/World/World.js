@@ -20,21 +20,11 @@ const World = () => {
           </div>
           <div className="row mb-3">
             <div className="col-12 themed-grid-col">
-              Record Breakdown
+              Filter by Country
             </div>
           </div>
           <div className="row mb-3">
-            <div className="col-6 themed-grid-col">
-              <h4>Deaths</h4>
-              <span>{covidTotal.today_deaths}</span>
-            </div>
-            <div className="col-6 themed-grid-col">
-              <h4>Recovered</h4>
-              <span>{covidTotal.today_recovered}</span>
-            </div>
-            <div className="col-12 themed-grid-col text-center">
-              <Country />
-            </div>
+            <Country />
           </div>
         </div>
       )}

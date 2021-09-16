@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { date } from '../../api/covid';
-import Button from './Button';
+import Card from './card';
 
 const selectCountry = () => {
   const state = useSelector((state) => state.covid);
@@ -16,26 +16,19 @@ const selectCountry = () => {
     setCountry(event.target.value);
   };
   return (
-    <form>
-      <p>Filter By Country:</p>
-      <div>
-        <label htmlFor="countries">
-          <select className="py-1" name="countries" id="countries" onChange={(e) => { handleSelect(e); }}>
-            {
-              countriesKeys.map((country) => (
-                <option
-                  key={country[0]}
-                  value={country[0]}
-                >
-                  {country[0]}
-                </option>
-              ))
-            }
-          </select>
-        </label>
-        <Button select={country} path={country} />
-      </div>
-    </form>
+    <div className="grid-container py-1" name="countries" id="countries">
+      {
+        countriesKeys.map((obj) => (
+          <Card
+            select={country}
+            country={obj}
+            path={country}
+            onChange={(e) => { handleSelect(e); }}
+            key={obj[0]}
+          />
+        ))
+      }
+    </div>
   );
 };
 
