@@ -7,11 +7,9 @@ const Button = (properties) => {
   const dispatch = useDispatch();
   const { select, path } = properties;
   return (
-    <button className="border border-0" type="button" onClick={() => { dispatch(filterCountry(select)); }}>
-      <NavLink to={`/${path}`} className="btn btn-primary text-white ms-1 py-0 px-3">
-        Filter
-      </NavLink>
-    </button>
+    <NavLink to={`/${path}`} className="btn btn-primary text-white ms-1 py-1 px-3" onClick={() => { dispatch(filterCountry(select)); }}>
+      Filter
+    </NavLink>
   );
 };
 

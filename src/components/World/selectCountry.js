@@ -20,7 +20,7 @@ const selectCountry = () => {
       <p>Filter By Country:</p>
       <div>
         <label htmlFor="countries">
-          <select name="countries" id="countries" onChange={(e) => { handleSelect(e); }}>
+          <select className="py-1" name="countries" id="countries" onChange={(e) => { handleSelect(e); }}>
             {
               countriesKeys.map((country) => (
                 <option
