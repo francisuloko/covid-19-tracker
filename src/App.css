@@ -12,9 +12,16 @@
 }
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
 }
 
 .grid-item {
- padding: 15px;
+ padding: 5px 15px 50px 15px;
+ color: white;
+ border: 1px solid #eee;
+ background-color: #634E46FF;
+}
+
+.grid-item:nth-child(odd){
+  background-color: #D61A3C;
 }

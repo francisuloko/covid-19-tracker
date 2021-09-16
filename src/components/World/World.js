@@ -8,7 +8,7 @@ const World = () => {
   return (
     <>
       {covidTotal && (
-        <div className="container">
+        <div className="container p-0 m-0">
           <div className="row mb-3">
             <div className="col-6 themed-grid-col">
               {covidTotal.name}
