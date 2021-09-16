@@ -12,71 +12,69 @@ const Country = () => {
   if (state.data.dates[date]) {
     return (
       <div>
-        <Back />
-        <div>
-          <h1>
-            {state.country}
-          </h1>
-          <div>
-            <h2>
-              Total Confirmed Cases
-              {
-                countries[state.country].today_confirmed
-              }
-            </h2>
+        <div className="container p-0 m-0 text-end">
+          <div className="row m-0">
+            <div className="col-6 themed-grid-col grid-item text-start">
+              <Back />
+            </div>
+            <div className="col-6 themed-grid-col grid-item">
+              <h2>
+                {state.country}
+              </h2>
+              <span>
+                {countries[state.country].today_confirmed}
+              </span>
+            </div>
           </div>
         </div>
-        <h2>
-          More Info
-        </h2>
-        <ul>
+        <ul className="country-data m-0 p-0">
           <li>
-            <p>
-              {countries[state.country].today_deaths}
-            </p>
-            <h2>
+            <span>
               Total Confirmed Deaths
-            </h2>
+            </span>
+            <span>
+              {countries[state.country].today_deaths}
+            </span>
           </li>
           <li>
-            <p>
-              {countries[state.country].today_recovered}
-            </p>
-            <h2>
+            <span>
               Total Confirmed Recovered
-            </h2>
+            </span>
+            <span>
+              {countries[state.country].today_recovered}
+            </span>
           </li>
           <li>
-            <p>
-              {countries[state.country].today_new_confirmed}
-            </p>
-            <h2>
+            <span>
               Todays Confirmed Cases
-            </h2>
+            </span>
+            <span>
+              {countries[state.country].today_new_confirmed}
+            </span>
           </li>
           <li>
-            <p>
-              {countries[state.country].today_new_deaths}
-            </p>
-            <h2>
+            <span>
               Todays Deaths
-            </h2>
+            </span>
+            <span>
+              {countries[state.country].today_new_deaths}
+            </span>
           </li>
           <li>
-            <p>
-              {countries[state.country].today_new_recovered}
-            </p>
-            <h2>
+            <span>
               Todays Recovered
-            </h2>
+            </span>
+            <span>
+              {countries[state.country].today_new_recovered}
+            </span>
           </li>
           <li>
-            <p>
-              {countries[state.country].today_new_open_cases}
-            </p>
-            <h2>
+            <span>
               Todays Opened Cases
-            </h2>
+            </span>
+            <span>
+              {countries[state.country].today_new_open_cases}
+            </span>
           </li>
         </ul>
       </div>
@@ -84,7 +82,7 @@ const Country = () => {
   }
   return (
     <div>
-      <h2>No Record Found</h2>
+      <span>No Record Found</span>
     </div>
   );
 };
