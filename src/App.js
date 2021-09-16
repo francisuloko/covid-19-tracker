@@ -14,7 +14,7 @@ function App() {
   }, []);
   return (
     <Router>
-      <div className="mobile">
+      <div className="mobile bg-light">
         <Switch>
           <Route path={`/${state.country}`}>
             <Country />

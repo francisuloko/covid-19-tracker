@@ -7,7 +7,7 @@
 
 .mobile {
   max-width: 520px;
-  margin: 10px auto;
+  margin: 0 auto;
   border: 1px solid grey;
 }
 .grid-container {
@@ -24,4 +24,8 @@
 
 .grid-item:nth-child(odd){
   background-color: #D61A3C;
+}
+
+.color-2 {
+  background-color: #634E46FF;
 }
