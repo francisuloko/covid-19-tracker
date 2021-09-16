@@ -8,17 +8,21 @@ const World = () => {
   return (
     <>
       {covidTotal && (
-        <div className="container p-0 m-0 text-end">
+        <div className="p-0 m-0 text-end" data-testid="worldContainer">
           <div className="row m-0">
             <div className="col-6 themed-grid-col grid-item">
-              <h2>Covid-19 Reports</h2>
+              <h2>Covid-19</h2>
               <span>
                 {covidTotal.source}
               </span>
             </div>
             <div className="col-6 themed-grid-col grid-item">
-              <h2>World</h2>
-              <span>{covidTotal.today_confirmed}</span>
+              <h2>World Report</h2>
+              <span>
+                {
+                  `Cases: ${covidTotal.today_confirmed}`
+                }
+              </span>
             </div>
           </div>
           <div className="row m-0 p-0">

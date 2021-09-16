@@ -12,7 +12,7 @@ const selectCountry = () => {
     countriesKeys = Object.entries(countries);
   }
   return (
-    <div className="grid-container py-1 text-right" name="countries" id="countries">
+    <div className="grid-container py-1" name="countries" id="countries">
       {
         countriesKeys.map((obj) => (
           <Card

@@ -1,7 +1,6 @@
-const GET_DATA = 'covid-19-tracking/country/GET_DATA';
 const GET_DATA_SUCCESS = 'covid-19-tracking/country/GET_DATA_SUCCESS';
-const GET_DATA_ERR = 'covid-19-tracking/country/GET_DATA_ERR';
 const FILTER_COUNTRY = 'covid-19-tracking/country/FILTER_COUNTRY';
+const GET_DATA = 'covid-19-tracking/country/GET_DATA';
 
 const initialState = {
   data: {},
@@ -22,8 +21,6 @@ const CovidReducer = (state = initialState, action) => {
       return { ...state };
     case GET_DATA_SUCCESS:
       return { ...state, data: action.data };
-    case GET_DATA_ERR:
-      return { ...state, error: action.error };
     case FILTER_COUNTRY:
       return { ...state, country: action.payload };
     default:
@@ -34,7 +31,7 @@ const CovidReducer = (state = initialState, action) => {
 export {
   CovidReducer as default,
   filterCountry,
-  GET_DATA,
   GET_DATA_SUCCESS,
-  GET_DATA_ERR,
+  FILTER_COUNTRY,
+  GET_DATA,
 };

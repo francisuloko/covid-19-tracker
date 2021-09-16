@@ -5,39 +5,34 @@
   list-style-type: none;
 }
 
-.mobile {
-  max-width: 620px;
-  margin: 0 auto;
-  border: 1px solid grey;
-}
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-item {
- padding: 5px 15px 50px 15px;
- color: white;
- border: 1px solid #eee;
- background-color: #634E46FF;
+  padding: 5px 15px 50px 15px;
+  color: white;
+  border: 1px solid #eee;
+  background-color: #634e46ff;
 }
 
-.grid-item:nth-child(odd){
-  background-color: #D61A3C;
+.grid-item:nth-child(odd) {
+  background-color: #d61a3c;
 }
 
 .color-2 {
-  background-color: #634E46FF;
+  background-color: #634e46ff;
 }
 
 .country-data li {
   display: flex;
   padding: 10px 20px;
   justify-content: space-between;
-  background-color: #D61A3C;
+  background-color: #d61a3c;
   color: #fff;
 }
 
 .country-data li:nth-child(even) {
-  background-color: #634E46FF;
+  background-color: #634e46ff;
 }

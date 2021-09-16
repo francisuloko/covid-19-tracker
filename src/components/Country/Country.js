@@ -11,14 +11,14 @@ const Country = () => {
   }
   if (state.data.dates[date]) {
     return (
-      <div>
-        <div className="container p-0 m-0 text-end">
+      <div data-testid="detailsContainer">
+        <div className="p-0 m-0 text-end">
           <div className="row m-0">
             <div className="col-6 themed-grid-col grid-item text-start">
               <Back />
             </div>
             <div className="col-6 themed-grid-col grid-item">
-              <h2>
+              <h2 data-testid="country">
                 {state.country}
               </h2>
               <span>
@@ -30,7 +30,7 @@ const Country = () => {
             </div>
           </div>
         </div>
-        <ul className="country-data m-0 p-0">
+        <ul className="country-data m-0 p-0" data-testid="ul">
           <li>
             <span>
               Total Confirmed Deaths
