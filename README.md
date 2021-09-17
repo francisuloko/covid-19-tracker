@@ -2,11 +2,11 @@
 
 # Covid-19 React Capstone Project.
 
-> An API-based Mobile View Desktop Application Build With React to Display Global Covid-19 Statistics.
+> An API-based Mobile (View) Application Built With React to Display Global Covid-19 Statistics
 
-![screenshot](./screenshots/Missions_page.png)
-![screenshot](./screenshots/Rockets_page.png)
-![screenshot](./screenshots/My_profile_page.png)
+![screenshot](./screenshot.png)
+
+This app loads a global covid-19 data that can be filtered by country.
 
 In this project, I have implemented the following:
 
@@ -46,31 +46,31 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-  - run 'git clone https://github.com/francisuloko/covid-19-capstone-project.git' to clone the project.
+  - run `git clone https://github.com/francisuloko/covid-19-capstone-project.git` to clone the project.
 
 ### Install
 
-  - run 'npm install'
+  - run 'npm install'.
 
 ### Usage
 
-  - open th project directory and you will see all the project files
+  - open th project directory and you will see all the project files.
 
 ### Run tests
 
-  - run 'npm run test'
+  - run 'npm run test'.
 
 ### Deployment
 
- - run 'npm start' to run the server
+ - run 'npm start' to run the server.
 
 
 ## Authors
 
 👤 **Francis Uloko**
-- [GitHub](https://github.com/francisuloko)
-- [Twitter](https://twitter.com/francisuloko)
-- [LinkedIn](https://linkedin.com/in/francisuloko)
+- [GitHub](https://github.com/francisuloko).
+- [Twitter](https://twitter.com/francisuloko).
+- [LinkedIn](https://linkedin.com/in/francisuloko).
 
 ## 🤝 Contributing
 
