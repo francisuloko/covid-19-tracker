@@ -32,7 +32,7 @@ In this project, I have implemented the following:
 
 ## Live Demo
 
-Click [here]() to preview Live App.
+Click [here](https://covid-19-captstone-project.netlify.app/) to preview Live App.
 
 
 ## Getting Started
