@@ -7,14 +7,14 @@ import App from '../../App';
 import store from '../../redux/configureStore';
 import '@testing-library/jest-dom/extend-expect';
 
-describe('App Integration', () => {
-  test('display API data source', async () => {
-    const { debug } = render(
+describe('App integration', () => {
+  test('render covid-19 data source', async () => {
+    const MockApp = () => (
       <Provider store={store}>
         <App />
-      </Provider>,
+      </Provider>
     );
-    debug();
-    expect(screen.getByText('Narrative')).toBeInTheDocument();
+    render(<MockApp />);
+    expect(screen.queryByTestId("app")).toBeInTheDocument();
   });
 });

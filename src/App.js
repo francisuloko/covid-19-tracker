@@ -13,8 +13,8 @@ function App() {
     dispatch(getData());
   }, []);
   return (
-    <Router>
-      <div className="desktop-friendly bg-light">
+    <div className="desktop-friendly bg-light" data-testid="app">
+      <Router>
         <Switch>
           <Route path={`/${state.country}`}>
             <Country />
@@ -23,8 +23,8 @@ function App() {
             <World />
           </Route>
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
