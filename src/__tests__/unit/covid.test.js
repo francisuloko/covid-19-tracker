@@ -9,16 +9,16 @@ describe('Covid Reducer', () => {
   };
 
   const response = {
-    "data": {
-      "dates": {},
+    data: {
+      dates: {},
     },
-  }
+  };
 
   it('store data in redux state', () => {
     expect(CovidReducer({}, ({ type: GET_DATA_SUCCESS, data }))).toStrictEqual(response);
   });
 
   it('Filter Country Action', () => {
-    expect(CovidReducer({}, (filterCountry("Afghanistan")))).toStrictEqual({ country: "Afghanistan" });
+    expect(CovidReducer({}, (filterCountry('Afghanistan')))).toStrictEqual({ country: 'Afghanistan' });
   });
 });

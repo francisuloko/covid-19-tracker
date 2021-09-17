@@ -15,6 +15,6 @@ describe('App integration', () => {
       </Provider>
     );
     render(<MockApp />);
-    expect(screen.queryByTestId("app")).toBeInTheDocument();
+    expect(screen.queryByTestId('app')).toBeInTheDocument();
   });
 });
