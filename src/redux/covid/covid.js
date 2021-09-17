@@ -1,6 +1,5 @@
 const GET_DATA_SUCCESS = 'covid-19-tracking/country/GET_DATA_SUCCESS';
 const FILTER_COUNTRY = 'covid-19-tracking/country/FILTER_COUNTRY';
-const GET_DATA = 'covid-19-tracking/country/GET_DATA';
 
 const initialState = {
   data: {},
@@ -17,8 +16,6 @@ const CovidReducer = (state = initialState, action) => {
     return initialState;
   }
   switch (action.type) {
-    case GET_DATA:
-      return { ...state };
     case GET_DATA_SUCCESS:
       return { ...state, data: action.data };
     case FILTER_COUNTRY:
@@ -33,5 +30,4 @@ export {
   filterCountry,
   GET_DATA_SUCCESS,
   FILTER_COUNTRY,
-  GET_DATA,
 };

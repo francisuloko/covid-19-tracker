@@ -5,6 +5,11 @@
   list-style-type: none;
 }
 
+.desktop-friendly {
+  max-width: 534px;
+  margin: 0 auto;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

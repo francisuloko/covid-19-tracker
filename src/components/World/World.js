@@ -8,26 +8,42 @@ const World = () => {
   return (
     <>
       {covidTotal && (
-        <div className="p-0 m-0 text-end" data-testid="worldContainer">
+        <div className="p-0 m-0 text-end">
           <div className="row m-0">
             <div className="col-6 themed-grid-col grid-item">
-              <h2>Covid-19</h2>
-              <span>
+              <h2>Global Covid-19</h2>
+              <span data-testid="source">
                 {covidTotal.source}
               </span>
             </div>
             <div className="col-6 themed-grid-col grid-item">
-              <h2>World Report</h2>
+              <h2 data-testid="world">Cases</h2>
               <span>
                 {
-                  `Cases: ${covidTotal.today_confirmed}`
+                  covidTotal.today_confirmed
+                }
+              </span>
+            </div>
+          </div>
+          <div className="row m-0">
+            <div className="col-6 themed-grid-col grid-item">
+              <h2>Deaths</h2>
+              <span data-testid="source">
+                {covidTotal.today_deaths}
+              </span>
+            </div>
+            <div className="col-6 themed-grid-col grid-item">
+              <h2 data-testid="world">Recovered</h2>
+              <span>
+                {
+                  covidTotal.today_recovered
                 }
               </span>
             </div>
           </div>
           <div className="row m-0 p-0">
             <div className="col-12 themed-grid-col text-start text-secondary">
-              Filter by Country
+              Filtered by Country
             </div>
           </div>
           <div className="row mb-3">
