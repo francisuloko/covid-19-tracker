@@ -24,9 +24,6 @@ const Country = () => {
               <span>
                 {countries[state.country].today_confirmed}
               </span>
-              <span>
-                {countries[state.country].source}
-              </span>
             </div>
           </div>
         </div>
