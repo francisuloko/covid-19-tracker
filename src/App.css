@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.desktop-friendly {
+  max-width: 534px;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-item {
+  padding: 5px 15px 50px 15px;
+  color: white;
+  border: 1px solid #eee;
+  background-color: #f31f46;
+}
+
+.grid-item:nth-child(odd) {
+  background-color: #d61a3c;
+}
+
+.color-2 {
+  background-color: #d61a3c;
+}
+
+.country-data li {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  background-color: #d61a3c;
+  color: #fff;
+}
+
+.country-data li:nth-child(even) {
+  background-color: #634e46ff;
+}
