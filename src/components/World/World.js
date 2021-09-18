@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Country from './selectCountry';
+import FilterCountry from './filterCountry';
 
 const World = () => {
   const state = useSelector((state) => state.covid);
@@ -43,7 +44,7 @@ const World = () => {
           </div>
           <div className="row m-0 p-0">
             <div className="col-12 themed-grid-col text-start text-secondary">
-              Filtered by Country
+              <FilterCountry />
             </div>
           </div>
           <div className="row mb-3">
